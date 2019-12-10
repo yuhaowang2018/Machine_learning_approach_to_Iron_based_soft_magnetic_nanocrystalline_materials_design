@@ -1,21 +1,5 @@
 # Machine learning approach to Fe-based soft magnetic nanocrystalline materials design
 
-## Feature Selection and Machine Learning exploration
-In the Feature selection and Data Visualization folder, the following tasks are carried out:
-* Feature selection using feature importance of Gradient Boost Trees.
-* Compare model performance of Random Forest, kNN, Decision Tree, Simple fead forward Neural Network, SVM and Linear Regression. 
-* Evaluate model accuracy using 20-fold cross validation on Magnetic Saturation, Magnetostriction and Coercivity.
+As  applied  in  a  great  number  of  research  areas,  machine  learning  is  currently  playing  a significant role in materials design.  In this work, we utilized machine learning techniques to efficiently boost the development of soft magnetic materials.  This process includes building a database composed of published experimental results, utilizing machine learning methods on  it,  thus  identifying  the  trends  of  magnetic  properties  in  soft  magnetic  materials,  and accelerating the design of next-generation soft magnetic nanocrystalline materials through the  use  of  numerical  optimization.   Machine  learning  regression  models  were  trained  to predict magnetic saturation, coercivity and magnetostriction and further to use a stochastic optimization framework to optimize the corresponding magnetic properties.
 
-
-
-
-## Regression Analysis and Optimization
-In this notebook, the flollowing tasks are performed:
-* exploratory-data-analysis (EDA), feature engineering. 
-* Hypothesis testing for linear regression.
-* Distribution transformation.
-* Feature selection using LASSO.
-* Regression model using linear regression.
-* Optimizing magnetic property based on regression models by changing material processing conditions.
-
-
+To  verify  the  feasibility  of  the  machine  learning  model,  several  optimized  soft  magnetic materials—specified in terms of composition and thermomechanical treatments—have been predicted and then prepared and tested, which shows great consistency between predictions and experiments, proving the reliability of the design model.
