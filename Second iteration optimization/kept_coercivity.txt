@@ -1,0 +1,10 @@
+Fe
+Si
+B
+P
+Ge
+Cu
+Nb
+Mo
+Annealing temperature (K)
+Ribbon Thickness (um)

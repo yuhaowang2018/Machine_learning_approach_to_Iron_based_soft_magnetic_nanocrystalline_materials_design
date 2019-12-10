@@ -1,0 +1,11 @@
+Fe
+Si
+B
+Zr
+Nb
+Ta
+Annealing temperature (K)
+Relative to Fe BP
+Relative to Early BP
+Early Weighted Volume
+Early Weighted Mass

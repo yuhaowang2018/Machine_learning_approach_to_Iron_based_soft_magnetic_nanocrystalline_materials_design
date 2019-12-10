@@ -1,0 +1,19 @@
+Fe
+Si
+B
+P
+Ge
+Cu
+Au
+Nb
+Mo
+Annealing temperature (K)
+Primary Crystallization Peak (K)
+Ribbon Thickness (um)
+Relative to Early SiCAl
+Relative to Late SiCAl
+Relative to Early BP
+Relative to Late BP
+Early Weighted Volume
+Early Weighted Mass
+Delta T1

@@ -1,0 +1,8 @@
+Fe
+Si
+B
+P
+Nb
+Annealing temperature (K)
+Annealing Time (s)
+Ribbon Thickness (um)

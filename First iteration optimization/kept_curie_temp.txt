@@ -1,0 +1,7 @@
+Si
+Nb
+Annealing temperature (K)
+Primary Crystallization Onset (K)
+Ribbon Thickness (um)
+Early Weighted Mass
+Delta T0

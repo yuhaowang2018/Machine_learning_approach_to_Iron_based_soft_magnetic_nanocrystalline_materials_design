@@ -1,0 +1,11 @@
+Fe
+Si
+B
+P
+Zr
+Nb
+Annealing temperature (K)
+Annealing Time (s)
+Delta T2
+Ribbon Thickness (um)
+Total BP
