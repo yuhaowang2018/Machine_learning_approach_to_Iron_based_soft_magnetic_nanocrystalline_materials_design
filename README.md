@@ -22,7 +22,7 @@ The folder contains a python notebook which uses the following five methods to i
     2. Find columns with a single unique value
     3. Find collinear variables with a correlation greater than 95%
     4. Find features with 0.0 feature importance from a gradient boosting machine (gbm)
-    5. Find features that contribute less than 95% to a specified cumulative feature     	    importance from the gbm
+    5. Find features that contribute less than 95% to a specified cumulative feature importance from the gbm
 ##### Machine learning model 
 
 We use "Orange" software for preliminary screening of a suitable machine learning model. The file "MachineLearningWorkflow.ows" is the main file that shows our work flow in Orange to select the final model from a range of different model choices. 
