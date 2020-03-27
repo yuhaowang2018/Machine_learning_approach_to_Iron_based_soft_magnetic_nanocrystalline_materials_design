@@ -18,11 +18,57 @@ The folder contains two python notebooks that display an overview of all the dat
 
 The folder contains a python notebook which uses the following five methods to identify features for removal:
 
-    1. Find columns with a missing percentage greater than 50%
-    2. Find columns with a single unique value
-    3. Find collinear variables with a correlation greater than 95%
-    4. Find features with 0.0 feature importance from a gradient boosting machine (gbm)
-    5. Find features that contribute less than 95% to a specified cumulative feature importance from the gbm
+1. Find columns with a missing percentage greater than 50%
+2. Find columns with a single unique value
+3. Find collinear variables with a correlation greater than 95%
+4. Find features with 0.0 feature importance from a gradient boosting machine (GBM)
+5. Find features that contribute less than 95% to a specified cumulative feature importance from the GBM
+
 ##### Machine learning model 
 
-We use "Orange" software for preliminary screening of a suitable machine learning model. The file "MachineLearningWorkflow.ows" is the main file that shows our work flow in Orange to select the final model from a range of different model choices. 
+We use "Orange" software for preliminary screening of a suitable machine learning model. The file "MachineLearningWorkflow.ows" is the main file that shows our work flow in Orange to select the final model from a range of different model choices. The python notebook "LearningResults.ipynb" shows the performance comparison between five different algorithms and the predicted capability of random forest algorithm. 
+
+The machine learning model training includes the following procedures: 
+
+1. Prepare the data based on feature space after previous feature selection (dimensionality reduction) process and separate.
+2. Utilize five different algorithms: Random Forest, kNN, Decision Tree,  SVM and Linear Regression.
+3. When evaluating the performance, we use 20-fold cross validation procedure and replace the null values in features with the mean response.
+
+As results show, Random forest performs better in most properties. 
+
+##### First iteration optimization
+
+The python notebook "First iteration optimization.ipynb" contains the procedure we used for our first iteration of optimization.  In this iteration, we attempted to maximize magnetic saturation while keeping coercivity and magnetostriction as low as possible. 
+
+The optimization steps include:
+
+1. Merge features of magnetic saturation, magnetostriction and coercivity together.
+2. Build random forest model on each properties separately.
+3. Impose constraints on composition space, the sum of all the elements cannot exceed 100.
+4. Utilize differential evolution algorithm with four different optimization strategy:
+   - Constrain ln(coercivity) < -1.5; constrain magnetostriction < 3; maximizing magnetic saturation
+   - Constrain magnetostriction < 3 ; minimizing (-magnetic saturation+coercivity)
+   - Constrain ln(coercivity) < -0.5; constrain magnetostriction < 3; maximizing magnetic saturation.
+   - Constrain magnetostriction < 3 ; minimizing (-magnetic saturation*4+ ln(coercivity) )
+5. Combine results from all the strategy and pick the most suitable choices. 
+
+##### Second iteration optimization
+
+The python notebook "Second iteration of optimization.ipynb" describes the procedure we used for our second iteration of optimization after the experimental validation of the first iteration. In this iteration, we narrowed our focus to maximize magnetic saturation and minimize coercivity. In addition, the composition space is constrained to be in the FINEMET range. 
+
+The optimization steps include:
+
+1. Merge available features of coercivity and magnetic saturation together. 
+2. Build random forest model on coercivity and magnetic saturation separately. 
+3. Impose constraints on composition space, the sum of all the elements cannot exceed 100.
+4. Utilize differential evolution algorithm with the following optimization strategy:
+   - Constrain ln(coercivity)<0.5; maximizing magnetic saturation
+5. The optimization has four different constraints on element selection:
+   - Include all the elements of interest.
+   - Constrain one element of the group "Ge, Mo, Nb, P" to zero.
+   - Constrain two elements of the group "Ge, Mo, Nb, P" to zero.
+   - Constrain three elements of the group "Ge, Mo, Nb, P" to zero.
+6. Combine results from all the different constraints and pick the most suitable choices. 
+
+
+
