@@ -6,13 +6,32 @@ As  applied  in  a  great  number  of  research  areas,  machine  learning  is  
 
 To  verify  the  feasibility  of  the  machine  learning  model,  several  optimized  soft  magnetic materials—specified in terms of composition and thermomechanical treatments—have been predicted and then prepared and tested, which shows great consistency between predictions and experiments, proving the reliability of the design model.
 
+#### Dependencies
+
+- Pandas >1.0.0
+- Numpy >1.13
+- Matplotlib > 3.2
+- Scikit-learn > 0.22
+- Scipy > 1.2
+
 #### Contents 
 
 Different folders inside the repository are designated for different parts of our machine learning approach:
 
 ##### Data Visualizations
 
-The folder contains two python notebooks that display an overview of all the data we collected from literatures. 
+The folder contains two python notebooks that display an overview of all the data we collected from literatures. The total number of entries of data we collected is 1441. 
+
+The data curation procedure follows the steps below:
+
+1. Remove all data which is missing annealing temperature, annealing time, all as-quenched data, and all data processed below room temperature
+2. Round Annealing Temperatures to typical processing values - every 5th degree Celsius
+3. Round Annealing Times to typical processing values - nearest half hour
+4. Remove points out of nanocrystalline regime - grain diameter over 60nm
+5. Remove papers with ultrahigh permeabilities
+6. Remove any features which are unused after data reduction
+
+We removed 146 entries after curation process.
 
 ##### Feature selection
 
