@@ -61,7 +61,7 @@ The python notebook "First iteration optimization.ipynb" contains the procedure 
 
 The optimization steps include:
 
-1. Merge features of magnetic saturation, magnetostriction and coercivity together.
+1. Merge features of magnetic saturation, magnetostriction and coercivity together, fill zeros in null values.
 2. Build random forest model on each properties separately.
 3. Impose constraints on composition space, the sum of all the elements cannot exceed 100.
 4. Utilize differential evolution algorithm with four different optimization strategy:
@@ -77,7 +77,7 @@ The python notebook "Second iteration of optimization.ipynb" describes the proce
 
 The optimization steps include:
 
-1. Merge available features of coercivity and magnetic saturation together. 
+1. Merge available features of coercivity and magnetic saturation together, fill zeros in null values.. 
 2. Build random forest model on coercivity and magnetic saturation separately. 
 3. Impose constraints on composition space, the sum of all the elements cannot exceed 100.
 4. Utilize differential evolution algorithm with the following optimization strategy:
