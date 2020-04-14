@@ -20,7 +20,7 @@ Different folders inside the repository are designated for different parts of ou
 
 ### Data visualizations
 
-The folder contains two python notebooks that display an overview of all the data we collected from literatures. The total number of entries of data we collected is 1441. 
+The folder contains two python notebooks `Data Visualizations Learning.ipynb` and `Database Statistics.ipynb`  that display an overview of all the data we collected from literatures. The total number of entries of data we collected is 1440. 
 
 The data curation procedure follows the steps below:
 
@@ -34,7 +34,7 @@ We removed 146 entries after curation process.
 
 ### Feature selection
 
-The folder contains a python notebook which uses the following five methods to identify features for removal:
+The folder contains a python notebook `Select Features.ipynb` which uses the following five methods to identify features for removal:
 
 1. Find columns with a missing percentage greater than 50%
 2. Find columns with a single unique value
@@ -44,7 +44,7 @@ The folder contains a python notebook which uses the following five methods to i
 
 ### Machine learning model 
 
-We use "Orange" software for preliminary screening of a suitable machine learning model. The file "MachineLearningWorkflow.ows" is the main file that shows our work flow in Orange to select the final model from a range of different model choices. The python notebook "LearningResults.ipynb" shows the performance comparison between five different algorithms and the predicted capability of random forest algorithm. 
+We use `Orange` software for preliminary screening of a suitable machine learning model. The file `MachineLearningWorkflow.ows` is the main file that shows our work flow in Orange to select the final model from a range of different model choices. The python notebook `LearningResults.ipynb` shows the performance comparison between five different algorithms and the predicted capability of random forest algorithm. 
 
 The machine learning model training includes the following procedures: 
 
@@ -56,7 +56,7 @@ As results show, Random forest performs better in most properties.
 
 ### First iteration optimization
 
-The python notebook "First iteration optimization.ipynb" contains the procedure we used for our first iteration of optimization.  In this iteration, we attempted to maximize magnetic saturation while keeping coercivity and magnetostriction as low as possible. 
+The python notebook `First iteration optimization.ipynb` contains the procedure we used for our first iteration of optimization.  In this iteration, we attempted to maximize magnetic saturation while keeping coercivity and magnetostriction as low as possible. 
 
 The optimization steps include:
 
@@ -72,7 +72,7 @@ The optimization steps include:
 
 ### Second iteration optimization
 
-The python notebook "Second iteration of optimization.ipynb" describes the procedure we used for our second iteration of optimization after the experimental validation of the first iteration. In this iteration, we narrowed our focus to maximize magnetic saturation and minimize coercivity. In addition, the composition space is constrained to be in the FINEMET range. 
+The python notebook `Second iteration of optimization.ipynb` describes the procedure we used for our second iteration of optimization after the experimental validation of the first iteration. In this iteration, we narrowed our focus to maximize magnetic saturation and minimize coercivity. In addition, the composition space is constrained to be in the FINEMET range. 
 
 The optimization steps include:
 
